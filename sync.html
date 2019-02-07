@@ -178,11 +178,11 @@ div, section {
     step() {
         //if (!this.running) return;
         //Tohle zavolam 5x , kazdej beh bude trvat sekundu....
-        callNTimes(st,5,1000);
+        callNTimes(prvnifce,5,1000);
     
 
         //A potom chci dopici pustit druhou fci 5x a aby taky trvala sekundu :D
-        //callNTimes(st,5,1000);
+        //callNTimes(druhafce,5,1000);
     }
 }
 
@@ -193,7 +193,7 @@ function callNTimes(func, num, delay) {
     setTimeout(function() { callNTimes(func, num - 1, delay); }, delay);
 }
 
-function sq(){   
+function prvnifce(){   
     if(this.semaphore){
         changeBackground("red");
         settext("red");                    
@@ -206,7 +206,7 @@ function sq(){
     return true;           
 }
 
-function st(){   
+function druhafce(){   
     if(this.semaphore){
         changeBackground("blue");
         settext("blue");                    
