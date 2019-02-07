@@ -1,0 +1,233 @@
+<!--https://codepen.io/anon/pen/GzvVZG-->
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+
+    <style type="text/css">
+    * {
+      margin: 0;
+      padding: 0;
+  }
+
+  @import url('https://fonts.googleapis.com/css?family=Roboto');
+
+  body {
+    margin: 0 auto;
+    background-size: 100%;
+    white-space: nowrap;
+    font-family: 'Roboto', "HelveticaNeueLight", "HelveticaNeue-Light", "Helvetica Neue Light", "HelveticaNeue", "Helvetica Neue", 'TeXGyreHerosRegular', "Helvetica", "Tahoma", "Geneva", "Arial", sans-serif;
+    /* Font varient */
+    -webkit-font-variant-ligatures: none;
+    font-variant-ligatures: none;
+    /* Smoothing */
+    text-rendering: optimizeLegibility;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    font-smoothing: antialiased;
+    text-shadow: rgba(0, 0, 0, .01) 0 0 1px;
+    background-color:  white;
+    -webkit-transition-property: all;
+    transition-property: all;
+    -webkit-transition-duration: 0s;
+    transition-duration: 0s;
+    font-size: 3.3vm;
+    font-size: 3.3vmin;
+}
+
+h1 {
+    font-size: 6.6vm;
+    font-size: 6.6vmin;
+}
+
+h2 {
+    font-size: 4.95vm;
+    font-size: 4.95vmin;
+}
+
+div, section {
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    flex-direction: column;
+    padding: 1vh;
+    margin: 1vh;
+}
+
+
+
+
+
+
+.button {
+  color: #bbb;
+  font-size: 6vw;
+  margin: 0 0.5em;
+  text-decoration: none;
+}
+
+.button:first-child {
+    margin-left: 0;
+}
+
+.button:last-child {
+    margin-right: 0;
+}
+
+.button:hover {
+  color: white;
+}
+
+.controls {
+  /*position: fixed;*/
+  text-align: center;
+  width: 100%;
+}
+
+.stopwatch {
+  font-size: 10vw;
+  height: 100%;
+  /*line-height: 10vh;*/
+  line-height: normal;
+  text-align: center;
+}
+
+
+.nowhappening {
+  font-size: 3vw;
+  height: 100%;
+  /*line-height: 10vh;*/
+  line-height: normal;
+  text-align: center;
+}
+
+.nowhappeninglist:p {
+  font-size: 1vw;
+  height: 100%;
+  /*line-height: 10vh;*/
+  line-height: normal;
+  text-align: center;
+}
+
+
+
+</style>
+
+
+
+
+
+</head>
+
+<body>
+
+  <!--ty class nejspis vymazat, pouzivam id-->
+    <div class="stopwatch" id="stopwatch">-1</div>
+    <div class="nowhappening" id="nowhappening">STANDART VAL</div>
+
+    <nav class="controls">
+        <a href="#" class="button" onClick="stopwatch.start();">Start</a>			
+	    <!--<a href="#" class="button" onClick="stopwatch.stop();">Stop</a>
+        //<a href="#" class="button" onClick="stopwatch.restart();">Restart</a> -->   
+    </nav>
+
+    <div class="nowhappeninglist" id="nowhappeninglist">
+
+
+
+    <script>
+        class Stopwatch {
+            constructor(display) {
+                this.running = false;
+                this.display = display;                                       
+                setSeriesCountdown('30');
+                settext('Get ready!');
+            }
+    
+    start() {                
+            this.step();        
+    }
+
+   
+   //https://www.twilio.com/blog/2015/10/asyncawait-the-hero-javascript-deserved.html
+    async step() {    
+        //run this first
+        await call(firstFunction,5,200);
+        await call(secondFunction,5,200);
+        
+        //do i need to return??
+        return 1;
+    }
+
+}
+
+
+
+function call(func, num, delay) {
+      return new Promise(resolve => {
+        //fake resolve
+        if (!num) resolve("1");
+        func();
+        setTimeout(() => { call(func, num - 1, delay); }, delay);
+    });    
+}
+
+//function callNTimes(func, num, delay) {
+    //if (!num) return;
+    //func();
+    //setTimeout(function() { callNTimes(func, num - 1, delay); }, delay);
+//}
+
+
+
+function firstFunction(){       
+
+    if(this.semaphore){
+        changeBackground("red");
+        settext("red");                    
+        this.semaphore = false;
+    } else{
+        changeBackground("grey");
+        settext("grey");                        
+        this.semaphore = true;
+    }
+}
+
+function secondFunction(){   
+    if(this.semaphore){
+        changeBackground("blue");
+        settext("blue");                    
+        this.semaphore = false;
+    } else{
+        changeBackground("green");
+        settext("green");                        
+        this.semaphore = true;
+    }    
+}
+
+
+function setSeriesCountdown(arg) {
+    document.getElementById("stopwatch").innerHTML = arg;       
+}
+
+function settext(commandtext) {      
+    document.getElementById("nowhappening").innerHTML = commandtext;
+}
+
+
+function changeBackground(color) {
+ document.body.style.background = color;
+}
+
+let stopwatch = new Stopwatch(
+    document.querySelector('.stopwatch'));
+
+</script>
+
+
+</body>
