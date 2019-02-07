@@ -155,13 +155,32 @@ div, section {
 
    
    //https://www.twilio.com/blog/2015/10/asyncawait-the-hero-javascript-deserved.html
-    async step() {    
-        //run this first
-        await call(firstFunction,5,1000);
-        await call(secondFunction,5,1000);
-        
-        //do i need to return??
-        return 1;
+    step() {    
+        let allPromises = [new Promise(function(resolve, _) {
+		let cnt = 5;
+	let interval = setInterval(function () {
+  	if(cnt === 0) {
+    clearnInterval(interval);
+    resolve();
+  }
+  firstFunction();
+  cnt--;
+}, 200);
+}),new Promise(function(resolve, _) {
+		let cnt = 5;
+	let interval = setInterval(function () {
+  	if(cnt === 0) {
+    clearnInterval(interval);
+    resolve();
+  }
+  secondFunction();
+  cnt--;
+}, 300);
+})];
+
+
+for (var i = 1; i < allPromises.length; i++)
+    promise = promise.then(allPromises[i]);
     }
 
 }
