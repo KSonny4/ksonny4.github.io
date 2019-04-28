@@ -1,0 +1,85 @@
+    <!DOCTYPE html>
+    <html>
+        <head>
+            <meta charset="utf-8">
+            <title>Lecture 08</title>
+
+            <style type="text/css">
+               
+               #QAplus{
+        position: fixed;
+        bottom: 5%;
+        left: 3%;
+    }
+
+    textarea {
+      resize: none;
+        outline: none;
+    }
+    
+    </style>
+     </head>
+     <body>
+
+      <div id="oneLine" class="QA flex-fill">
+        <div  class="form-group row flex-fill">
+            <div id="question-field" class="col-6 p-4">
+             <textarea class="form-control" rows="3" id="inputQuestion"  placeholder="Enter questions" ></textarea>
+             </div>
+
+
+             <div id="answer-field" class="col-5 p-4">
+              <textarea class="form-control" rows="1" id="inputAnswer" placeHolder="answer"></textarea>
+               </div>
+
+               <div class="col-1 p-4">
+      <button class="btn btn-danger mr-ms-2" id="QAdelete" type="button" ><i class="fas fa-trash-alt"><i class="fas fa-trash-alt">DELETEQA</i></button>
+    
+    </div>
+
+            </div>
+        </div>
+
+
+
+
+
+    <button class="btn QA btn-outline-success mr-sm-2" id="QAplus" type="button">
+             <i class="fas fa-plus">PLUSQA</i>
+             
+
+    <script>          
+
+    var div = document.getElementById('oneLine');
+
+    function addQA() {
+      var input = document.createElement('textarea'),
+      input2 = document.createElement('textarea'),
+      button = document.createElement('button');
+      
+      input.placeholder = "Question";
+      input2.placeholder = "Answer";
+      button.innerHTML = 'REMOVE';
+      // attach onlick event handler to remove button
+      button.onclick = removeQA;
+      
+      div.appendChild(input);
+      div.appendChild(input2);
+      div.appendChild(button);
+    }
+
+    function removeQA() {
+      // remove this button and its input
+      div.removeChild(this.previousElementSibling);
+      div.removeChild(this.previousElementSibling);
+      div.removeChild(this);
+    }
+
+    // attach onclick event handler to add button
+    document.getElementById('QAplus').addEventListener('click', addQA);
+    // attach onclick event handler to 1st remove button
+    document.getElementById('QAdelete').addEventListener('click', removeQA);
+            </script>
+
+        </body>
+    </html>
