@@ -32,8 +32,8 @@
               <textarea class="form-control" rows="1" id="inputAnswer" placeHolder="answer"></textarea>
                </div>
 
-               <div class="col-1 p-4">
-            <button class="btn btn-danger mr-ms-2" id="QAdelete" type="button" ><i class="fas fa-trash-alt">Remove</i></button>
+               <div class="col-1 p-4">  
+            <button class="btn btn-danger mr-ms-2" id="QAdelete" onclick="QAdelete()" type="button" ><i class="fas fa-trash-alt">Remove</i></button>
           </div>
 
          </div>
@@ -43,7 +43,7 @@
 
 
 
-    <button class="btn QA btn-outline-success mr-sm-2" id="QAplus" type="button">
+    <button class="btn QA btn-outline-success mr-sm-2" id="QAplus"  onclick="addQA()" type="button">
              <i class="fas fa-plus">PLUSQA</i>
              
 
@@ -114,9 +114,6 @@
       this.parentElement.parentElement.remove()
     }
 
-    
-    document.getElementById('QAplus').addEventListener('click', addQA);    
-    document.getElementById('QAdelete').addEventListener('click', removeQA);
             </script>
 
         </body>
