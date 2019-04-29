@@ -33,14 +33,11 @@
                </div>
 
                <div class="col-1 p-4">  
-            <button class="btn btn-danger mr-ms-2" id="QAdelete" onclick="removeQA()" type="button" ><i class="fas fa-trash-alt">Remove</i></button>
-          </div>
+                <button class="btn btn-danger mr-ms-2" id="QAdelete" onclick="removeQA(this)" type="button" ><i class="fas fa-trash-alt">Remove</i></button>
+              </div>
 
          </div>
       </div>
-
-
-
 
 
     <button class="btn QA btn-outline-success mr-sm-2" id="QAplus"  onclick="addQA()" type="button">
@@ -102,7 +99,7 @@
       button.id = "QAdelete";
       //TODO: tady chybi <i class="fas fa-trash-alt"> 
       button.innerHTML = 'Remove';
-      button.onclick = removeQA;
+      button.onclick = removeQAA;
 
 
       divbutton.appendChild(button);
@@ -110,8 +107,15 @@
       
     }
 
-    function removeQA() {
-      this.parentElement.parentElement.remove()
+    function removeQAA() {
+      console.log(this);
+      this.parentElement.parentElement.remove();
+    }
+
+
+    function removeQA(node) {
+      console.log(node);      
+      node.parentElement.parentElement.remove();
     }
 
     
