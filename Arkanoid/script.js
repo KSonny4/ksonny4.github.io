@@ -104,7 +104,13 @@ class Arkanoid {
             var score = document.getElementById("score");
             score.textContent = "Your score: " + this.score;
             var hs = document.getElementById("hs");
-            hs.textContent = "Highest score: " + localStorage.getItem("score");
+            var scoree = localStorage.getItem("score");
+            if(scoree == null){
+                  hs.textContent = "Highest score: 0";      
+            } else{
+                  hs.textContent = "Highest score: " + scoree;      
+            }
+            
 
             var background = new Image();
             background.src = "images/arcanoid_background.png";
