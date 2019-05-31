@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><title>chat - reddit</title><meta charset="utf8"><meta name="viewport" content="width=device-width, initial-scale=1"><style>
+  /* http://meyerweb.com/eric/tools/css/reset/
+    v2.0 | 20110126
+    License: none (public domain)
+  */
+
+  html, body, div, span, applet, object, iframe,
+  h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+  a, abbr, acronym, address, big, button, cite, code,
+  del, dfn, em, img, input, ins, kbd, q, s, samp,
+  small, strike, strong, sub, sup, tt, var,
+  b, u, i, center,
+  dl, dt, dd, ol, ul, li,
+  fieldset, form, label, legend,
+  table, caption, tbody, tfoot, thead, tr, th, td,
+  article, aside, canvas, details, embed,
+  figure, figcaption, footer, header, hgroup,
+  menu, nav, output, ruby, section, summary,
+  time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+  }
+
+  /* HTML5 display-role reset for older browsers */
+  article, aside, details, figcaption, figure,
+  footer, header, hgroup, menu, nav, section {
+    display: block;
+  }
+  body {
+    line-height: 1;
+    font-family: BentonSans, sans-serif;
+  }
+  ol, ul {
+    list-style: none;
+  }
+  blockquote, q {
+    quotes: none;
+  }
+  blockquote:before, blockquote:after,
+  q:before, q:after {
+    content: &#x27;&#x27;;
+    content: none;
+  }
+  table {
+    border-collapse: collapse;
+    border-spacing: 0;
+  }
+  a {
+    color: inherit;
+    text-decoration: inherit;
+  }
+
+  html, body {
+    width: 100%;
+    margin: 0;
+  };
+
+  /* HTML5 display-role reset for older browsers */
+  article, aside, details, figcaption, figure,
+  footer, header, hgroup, menu, nav, section {
+    display: block;
+  }
+
+  button {
+    background: transparent;
+    border: none;
+    color: inherit;
+    cursor: pointer;
+    padding: initial;
+  }
+
+  body {
+    min-height: calc(100vh - 48px);
+    line-height: 1;
+    font-family: IBMPlexSans, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  body ::-moz-selection {
+    background-color: #7dbcff99;
+  }
+
+  input, textarea, [contenteditable] {
+    
+  
+    font-family Noto Sans, Arial, sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 21px;
+
+    .fvfo &amp; {
+      font-family: Arial, sans-serif;
+      
+      line-height: 22px;
+    }
+  
+
+  }
+
+  html, body, #chat-container {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+  };
+</style><link rel="apple-touch-icon" sizes="57x57" href="https://www.redditstatic.com/desktop2x/img/favicon/apple-icon-57x57.png"><link rel="apple-touch-icon" sizes="60x60" href="https://www.redditstatic.com/desktop2x/img/favicon/apple-icon-60x60.png"><link rel="apple-touch-icon" sizes="72x72" href="https://www.redditstatic.com/desktop2x/img/favicon/apple-icon-72x72.png"><link rel="apple-touch-icon" sizes="76x76" href="https://www.redditstatic.com/desktop2x/img/favicon/apple-icon-76x76.png"><link rel="apple-touch-icon" sizes="114x114" href="https://www.redditstatic.com/desktop2x/img/favicon/apple-icon-114x114.png"><link rel="apple-touch-icon" sizes="120x120" href="https://www.redditstatic.com/desktop2x/img/favicon/apple-icon-120x120.png"><link rel="apple-touch-icon" sizes="144x144" href="https://www.redditstatic.com/desktop2x/img/favicon/apple-icon-144x144.png"><link rel="apple-touch-icon" sizes="152x152" href="https://www.redditstatic.com/desktop2x/img/favicon/apple-icon-152x152.png"><link rel="apple-touch-icon" sizes="180x180" href="https://www.redditstatic.com/desktop2x/img/favicon/apple-icon-180x180.png"><link rel="icon" type="image/png" sizes="192x192" href="https://www.redditstatic.com/desktop2x/img/favicon/android-icon-192x192.png"><link rel="icon" type="image/png" sizes="32x32" href="https://www.redditstatic.com/desktop2x/img/favicon/favicon-32x32.png"><link rel="icon" type="image/png" sizes="96x96" href="https://www.redditstatic.com/desktop2x/img/favicon/favicon-96x96.png"><link rel="icon" type="image/png" sizes="16x16" href="https://www.redditstatic.com/desktop2x/img/favicon/favicon-16x16.png"><link rel="manifest" href="https://www.redditstatic.com/desktop2x/img/favicon/manifest.json"><meta name="msapplication-TileColor" content="#ffffff"><meta name="msapplication-TileImage" content="https://www.redditstatic.com/desktop2x/img/favicon/ms-icon-144x144.png"><meta name="theme-color" content="#ffffff"><link href="minimize_data/css.css" rel="stylesheet"><style type="text/css" data-styled-components="" data-styled-components-is-local="true"></style><!-- base href="https://www.reddit.com/chat/minimize" --><style type="text/css">.vimvixen-console-frame {
+  margin: 0;
+  padding: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: 2147483647;
+  border: none;
+  background-color: unset;
+  pointer-events: none; }
+</style><style type="text/css">.vimvixen-hint {
+  background-color: yellow;
+  border: 1px solid gold;
+  font-weight: bold;
+  position: absolute;
+  text-transform: uppercase;
+  z-index: 2147483647;
+  font-size: 12px;
+  color: black;
+}
+</style></head><body><div id="chat-container"></div><script defer="defer" type="text/javascript" src="minimize_data/runtimeChat.js"></script><script defer="defer" type="text/javascript" src="minimize_data/RedesignContentFonts.js"></script><script defer="defer" type="text/javascript" src="minimize_data/RedesignSystemFonts.js"></script><script defer="defer" type="text/javascript" src="minimize_data/vendorsChatCollectionCommentsPageCommentsPageFrontpagePostCre.js"></script><script defer="defer" type="text/javascript" src="minimize_data/vendorsChatClientGiftsPollRedditRedesignChat.js"></script><script defer="defer" type="text/javascript" src="minimize_data/vendorsChatClientGiftsGovernanceReddit.js"></script><script defer="defer" type="text/javascript" src="minimize_data/vendorsChatClientGovernanceReddit.js"></script><script defer="defer" type="text/javascript" src="minimize_data/vendorsChatRedesignChat.js"></script><script defer="defer" type="text/javascript" src="minimize_data/ChatClientGiftsGovernanceReddit.js"></script><script defer="defer" type="text/javascript" src="minimize_data/ChatClientGovernanceReddit.js"></script><script defer="defer" type="text/javascript" src="minimize_data/ChatGovernanceRedditRedesignChat.js"></script><script defer="defer" type="text/javascript" src="minimize_data/ChatRedesignChat.js"></script><script defer="defer" type="text/javascript" src="minimize_data/Chat.js"></script></body></html>
