@@ -188,7 +188,7 @@ class: noconsole
 ## Jak vypadá commit
 ```
 commit 880d9161ba9de2cb8899d3e5ceea0c8590576ad2
-Author: Dan Vrátil <dan.vratil@czechitas.cz>
+Author: Petr Kubelka <petr.kubelka@avast.com>
 Date:   Wed Apr 10 17:42:29 2019 +0200
 
     Oprava nevinného překlepu
@@ -473,7 +473,7 @@ class: excer
 * Naklonuj si ho do počítače
 * Vytvoř v něm soubor `program.py`, který vypíše náhodné číslo od 1 do 100 _(snad sis nemyslela, že Ti to dneska projde bez Pythonu ;-)_
 * Svůj program commitni do gitu a pushni na GitHub
-* Potom ještě program uprav tak, aby vypisoval náhodná čísla v rozsahu, který uživatel zadá jako parametr příkazové řádky _(Martin a Dan na tebe bude hrdej!)_
+* Potom ještě program uprav tak, aby vypisoval náhodná čísla v rozsahu, který uživatel zadá jako parametr příkazové řádky _(Petr a Tomáš na tebe budou hrdí!)_
 * Nové změny commitni a pushni na GitHub
 * Podívej se, že tam opravdu jsou _(teď na tebe zas můžu bejt hrdej já)_
 
@@ -522,9 +522,9 @@ class: excer
 
 Když můj lokální klon repozitáře i server mají novou změnu, která mění stejnou řádku, nastává konflikt
 
-Situace: já i Petr jsme každý ve svém klonu repozitáře změnili stejnou řádku ve stejném souboru (každý trochu jinak) a udělali commit.
+Situace: já i Max jsme každý ve svém klonu repozitáře změnili stejnou řádku ve stejném souboru (každý trochu jinak) a udělali commit.
 
-Problém: když Petr pushne svou změnu na GitHub a já si ji zkusím stáhnout, nastane konflikt, protože Git neví, jak má Petrovu změnu napasovat na mojí.
+Problém: když Max pushne svou změnu na GitHub a já si ji zkusím stáhnout, nastane konflikt, protože Git neví, jak má Maxovu změnu napasovat na mojí.
 
 ---
 class: noconsole
@@ -539,7 +539,7 @@ Git mi do souboru, ve kterém nastal merge konflikt, uloží obě varianty a je 
 
 ```
 <<<<<<< HEAD
-Tohle je řádka, kterou jsem změnil já, Dan.
+Tohle je řádka, kterou jsem změnil já, Max.
 =======
 Tohle je řádka, kterou jsme změnil já, Petr.
 >>>>>>> master
@@ -547,11 +547,11 @@ Tohle je řádka, kterou jsme změnil já, Petr.
 
 --
 
-Jak konflikt vyřeším je na mně. Mohu zahodit svou změnu, Petrovu změnu, nebo můžu celou řádku přepsat
+Jak konflikt vyřeším je na mně. Mohu zahodit svou změnu, Maxovu změnu, nebo můžu celou řádku přepsat
 tak, aby nějakým způsobem zůstaly zachovány obě změny, třeba takto:
 
 ```
-Tohle je řádka, kterou jsme změnili my, Dan a Petr.
+Tohle je řádka, kterou jsme změnili my, Max a Petr.
 ```
 
 ---

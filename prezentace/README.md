@@ -5,10 +5,10 @@ od [Czechitas](https://www.czechitas.cz).
 
 ## Jak spustit prezentaci
 
-Aktuální prezentaci si můžeš zobrazit [online zde](https://danvratil.github.io/dapraha-git/prezentace).
+Aktuální prezentaci si můžeš zobrazit [online zde](https://ksonny4.github.io/prezentace/prezentace).
 
 
-Obsah slajdů je v souboru [prezentace.md](https://github.com/danvratil/dapraha-git/blob/master/prezentace.md).
+Obsah slajdů je v souboru [prezentace.md](https://github.com/ksonny4/dapraha-git/blob/master/prezentace.md).
 Samotná prezentace je udělaná pomocí RevealJS.
 
 Pokud si chceš prezentaci zobrazit lokálně ve svém PC, použij tento příkaz:
@@ -26,7 +26,7 @@ prezentace i tak vyžaduje přístup k internetu (kvůli fontům a RevealJS knih
 
 ## Prerekvizity
 + Založený účet na [GitHubu](https://www.github.com)
-* nainstalovaný [Git](https://git-scm.com), viz [instalace-gitu.md](https://danvratil.github.io/dapraha-git/instalace-gitu)
+* nainstalovaný [Git](https://git-scm.com), viz [instalace-gitu.md](https://ksonny4.github.io/prezentace/instalace-gitu)
 * nainstalovaný [VSCode](https://code.visualstudio.com)
 
 ## Odkazy
