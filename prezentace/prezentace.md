@@ -230,7 +230,7 @@ class: excer
 * Historie je série commitů
 * V jednom repozitáři může být i více historií, které se mohou různě větvit
 * Historii říkáme `branch`, česky _větev_, slovensky _vetva_, latinsky _genere_
-* Hlavní větev se jmenuje `main` (`master`) a existuje (skoro) v každém repozitáři
+* Hlavní větev se jmenuje `master` (`main`) a existuje (skoro) v každém repozitáři
 * K větvím se podrobněji vrátíme později (možná)
 
 ---
@@ -414,7 +414,7 @@ git push
 Někdy je potřeba specifikovat kam (tzv. "remote") a do jaké větve se mají změny nahrát:
 
 ```
-git push origin main
+git push origin master
 ```
 
 ---
@@ -542,7 +542,7 @@ Git mi do souboru, ve kterém nastal merge konflikt, uloží obě varianty a je 
 Tohle je řádka, kterou jsem změnil já, Tomas.
 =======
 Tohle je řádka, kterou jsme změnil já, Petr.
->>>>>>> main
+>>>>>>> master
 ```
 
 --
