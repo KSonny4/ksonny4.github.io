@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on Petr Kubelka</title>
+    <link>https://pkubelka.cz/posts/</link>
+    <description>Recent content in Posts on Petr Kubelka</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Petr Kubelka</copyright>
+    <lastBuildDate>Thu, 07 Jul 2022 13:13:45 +0100</lastBuildDate><atom:link href="https://pkubelka.cz/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>My First Post</title>
+      <link>https://pkubelka.cz/posts/my-first-post/</link>
+      <pubDate>Thu, 07 Jul 2022 13:13:45 +0100</pubDate>
+      
+      <guid>https://pkubelka.cz/posts/my-first-post/</guid>
+      <description>Unfortunatelly I love to do so many things I do not really have time to post here :(.</description>
+    </item>
+    
+  </channel>
+</rss>

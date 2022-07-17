@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://pkubelka.cz/aboutme/aboutme/</loc>
+    <lastmod>2022-07-07T13:33:48+01:00</lastmod>
+  </url><url>
+    <loc>https://pkubelka.cz/aboutme/</loc>
+    <lastmod>2022-07-07T13:33:48+01:00</lastmod>
+  </url><url>
+    <loc>https://pkubelka.cz/</loc>
+    <lastmod>2022-07-07T13:33:48+01:00</lastmod>
+  </url><url>
+    <loc>https://pkubelka.cz/posts/my-first-post/</loc>
+    <lastmod>2022-07-07T13:13:45+01:00</lastmod>
+  </url><url>
+    <loc>https://pkubelka.cz/posts/</loc>
+    <lastmod>2022-07-07T13:13:45+01:00</lastmod>
+  </url><url>
+    <loc>https://pkubelka.cz/misc/misc/</loc>
+    <lastmod>2021-05-07T21:42:53+02:00</lastmod>
+  </url><url>
+    <loc>https://pkubelka.cz/misc/</loc>
+    <lastmod>2021-05-07T21:42:53+02:00</lastmod>
+  </url><url>
+    <loc>https://pkubelka.cz/categories/</loc>
+  </url><url>
+    <loc>https://pkubelka.cz/tags/</loc>
+  </url>
+</urlset>
