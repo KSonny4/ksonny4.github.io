@@ -1,2 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([["RedesignSystemFonts"],{"./assets/fonts/IBMPlexSans/font.less":function(s,n,e){}}]);
-//# sourceMappingURL=RedesignSystemFonts.6f01c338e1546906d45d.js.map
